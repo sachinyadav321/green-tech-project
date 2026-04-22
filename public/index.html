@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTech | Chemistry of Environment</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <div class="logo">🌿 GreenTech</div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/login">Login</a>
+                <a href="/signup">Signup</a>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Chemistry of Environment</h1>
+            <h2>🌱 Principles of Green Technology</h2>
+            <p>Shaping a sustainable future through innovative chemical solutions & eco-friendly technologies</p>
+            <a href="/signup" class="cta-btn">Get Started →</a>
+        </div>
+    </div>
+
+    <div class="principles-section">
+        <h2>12 Principles of Green Chemistry</h2>
+        <div class="principles-grid" id="principlesGrid"></div>
+    </div>
+
+    <footer>
+        <p>© 2025 GreenTech Project | Chemistry of Environment | Major Project</p>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script>
+        // Fallback if script.js doesn't load
+        const principles = [
+            "Prevention", "Atom Economy", "Less Hazardous", 
+            "Safer Chemicals", "Safer Solvents", "Energy Efficiency",
+            "Renewable Feedstocks", "Reduce Derivatives", "Catalysis",
+            "Design Degradation", "Real-time Analysis", "Inherently Safer"
+        ];
+        const grid = document.getElementById('principlesGrid');
+        if(grid && grid.children.length === 0) {
+            principles.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'principle-card';
+                card.innerHTML = `<h3>♻️ ${p}</h3><p>Green Chemistry Principle</p>`;
+                grid.appendChild(card);
+            });
+        }
+    </script>
+</body>
+</html>
